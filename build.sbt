@@ -104,12 +104,6 @@ lazy val `tracker-impl` = (project in file("tracker-impl"))
   .dependsOn(`tracker-api`, jsonformats)
 
 
-lazy val `lux-backend-api` = (project in file("lux-backend-api"))
-  .settings(
-    libraryDependencies ++= Seq(
-      lagomScaladslApi
-    )
-  )
 
 lagomCassandraCleanOnStart in ThisBuild := true
 import scala.concurrent.duration._
